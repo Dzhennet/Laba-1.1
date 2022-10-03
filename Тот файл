@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-#define MAX_LOADSTRING 10
+#define MAX_LOADSTRING 1
 class Vector2D {
 public:
 	int x, y;
