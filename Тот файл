@@ -30,7 +30,6 @@ public:
 	}
 };
 
-HINSTANCE hInst; 
 WCHAR szTitle[MAX_LOADSTRING]; 
 WCHAR szWindowClass[MAX_LOADSTRING]; 
 
