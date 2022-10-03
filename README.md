@@ -121,9 +121,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 // ФУНКЦИЯ: WndProc(HWND, UINT, WPARAM, LPARAM)
 
 
-// ЦЕЛЬ: Обрабатывает сообщения в главном окне.
-
-
 
 // WM_COMMAND - обработать меню приложения
 
