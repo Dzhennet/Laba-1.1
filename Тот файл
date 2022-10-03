@@ -1,0 +1,48 @@
+#include "framework.h"
+
+
+#define MAX_LOADSTRING 10
+class Vector2D {
+public:
+	int x, y;
+	Vector2D() {
+		x = 0;
+		y = 0;
+	}
+	Vector2D(int _x, int _y) {
+		x = _x;
+		y = _y;
+	}
+	~Vector2D() {}
+	friend Vector2D operator+(const Vector2D v1, const Vector2D v2) {
+		return Vector2D(v1.x + v2.x, v1.y + v2.y);
+	}
+	friend Vector2D operator*(Vector2D v, int a) {
+		return Vector2D(v.x * a, v.y * a);
+	}
+	
+	Vector2D& operator=(const Vector2D& v) {
+		if (this == &v)
+			return *this;
+		this->x = v.x;
+		this->y = v.y;
+		return *this;
+	}
+};
+
+HINSTANCE hInst; 
+WCHAR szTitle[MAX_LOADSTRING]; 
+WCHAR szWindowClass[MAX_LOADSTRING]; 
+
+
+
+ATOM MyRegisterClass(HINSTANCE hInstance);
+BOOL InitInstance(HINSTANCE, int);
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_ LPWSTR lpCmdLine,
+	_In_ int nCmdShow)
+{
