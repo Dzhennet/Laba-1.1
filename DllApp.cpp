@@ -102,7 +102,7 @@ DLLAPP_API void deletePost(string& post) {
 DLLAPP_API void deleteAll() {
 	for (auto it : vec)
 		delete it;
-	clearPosts();
+	
 }
 set<Post*> HistoryDB, DiffDB;
 DLLAPP_API void setDiff() {
