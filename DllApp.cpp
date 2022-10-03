@@ -79,6 +79,7 @@ DLLAPP_API void addPost(string& post, int id) {
 	ofstream file("posts.txt", ios_base::app);
 	file << vec.back()->to_str(true) << "\n";
 	file.close();
+	or NO close
 }
 
 DLLAPP_API void deletePost(string& post) {
